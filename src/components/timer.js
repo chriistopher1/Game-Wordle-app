@@ -33,7 +33,6 @@ function Timer(props) {
   return (
     <div className="text-left">
       <p>Time Left: {props.timer.timeLeft}</p>
-      <button onClick={handleResetButton}>Reset</button>
     </div>
   );
 }
