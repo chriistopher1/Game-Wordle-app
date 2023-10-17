@@ -11,7 +11,6 @@ class PointCount extends React.Component {
     return (
       <div>
         <div>Total Point : {this.props.point.pointCount}</div>
-        <button onClick={this.handleAddPointCount}>Add Point</button>
       </div>
     );
   }
