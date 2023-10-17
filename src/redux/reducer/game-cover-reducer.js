@@ -25,7 +25,7 @@ export const fetchRandomGame = createAsyncThunk(
   }
 );
 
-const blurTailwindLevel = ["-md", "", "-sm"];
+const blurTailwindLevel = ["md", "", "sm"];
 
 const gameCoverSlice = createSlice({
   name: "gameCover",

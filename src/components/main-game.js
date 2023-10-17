@@ -9,6 +9,7 @@ import { decrement } from "../redux/reducer/life-point-reducer";
 import { incrementByAmount } from "../redux/reducer/point-reducer";
 import { resetTimer } from "../redux/reducer/timer-reducer";
 
+
 function Game() {
   const [warning, setWarning] = useState();
   const [status, setStatus] = useState(false);
@@ -58,11 +59,21 @@ function Game() {
             <div className="text-2xl mb-4">Guess the game!</div>
             {/* <h2>{gameName}</h2> */}
             {gameCover ? (
-              <img
-                src={gameCover.replace("t_thumb", "t_original")}
-                alt={gameName}
-                className={`h-72 w-auto blur${gameCoverBlur}`}
-              />
+              gameCoverBlur ? (
+                console.log(gameCoverBlur),
+                <img
+                  src={gameCover.replace("t_thumb", "t_original")}
+                  alt={gameName}
+                  className={`h-72 w-auto blur-${gameCoverBlur} `}
+                />
+              ) : (
+                console.log("masuk no gameCoverBlur"),
+                <img
+                  src={gameCover.replace("t_thumb", "t_original")}
+                  alt={gameName}
+                  className={`h-72 w-auto blur`}
+                />
+              )
             ) : (
               <p>Loading image...</p>
             )}
@@ -73,11 +84,10 @@ function Game() {
 
             <input
               type="text"
-              className="text-black outline-none border-4 focus-border-teal-400 w-72 h-10 pl-2 rounded-lg mt-8"
+              className="text-black outline-none border-4 focus:border-teal-400 w-72 h-10 pl-2 rounded-lg mt-8"
               onKeyDown={handleUserInput}
             />
           </div>
-          
         </div>
       ) : (
         <p>Loading game data...</p>
