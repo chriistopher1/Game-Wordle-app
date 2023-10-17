@@ -26,7 +26,7 @@ function Game() {
 
   function handleOnWrongAnswer() {
     console.log(gameCoverBlur);
-    dispatch(onWrongAnswer());
+ //   dispatch(onWrongAnswer());
   }
 
   function handleUserInput(event) {
