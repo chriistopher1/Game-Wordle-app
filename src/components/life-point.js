@@ -22,7 +22,6 @@ function LifePoint(props) {
   return (
     <div className="text-left">
       <p>LP : {lifeCount}</p>
-      <button onClick={handleDecrementButton}>Decrement</button>
     </div>
   );
 }
