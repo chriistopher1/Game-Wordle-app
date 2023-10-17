@@ -5,7 +5,7 @@ export const fetchRandomGame = createAsyncThunk(
   "gameCover/fetchRandomGame",
   async () => {
     try {
-      const response = await fetch("http://localhost:5000/fetchRandomGame");
+      const response = await fetch("https://game-wordle-backend.vercel.app/fetchRandomGame");
       if (response.ok) {
         const data = await response.json();
         // console.log("data : ", data);
