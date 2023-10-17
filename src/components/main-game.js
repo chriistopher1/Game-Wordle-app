@@ -64,7 +64,7 @@ function Game() {
                 <img
                   src={gameCover.replace("t_thumb", "t_original")}
                   alt={gameName}
-                  className={`h-72 w-auto blur-${gameCoverBlur} `}
+                  className={`h-72 w-auto blur-${gameCoverBlur}`}
                 />
               ) : (
                 console.log("masuk no gameCoverBlur"),
